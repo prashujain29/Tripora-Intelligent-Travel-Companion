@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cobalt: 40 100 216;
+    --color-coral: 255 120 107;
+    --color-warm: 250 250 247;
+    --color-lavender: 233 229 255;
+  }
+
+  body {
+    background-color: #FAFAF7;
+    color: #1E293B;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom editorial aesthetics */
+.editorial-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.editorial-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -8px rgba(40, 100, 216, 0.16);
+}
+
+/* Glass & Pale card surfaces */
+.surface-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(40, 100, 216, 0.05);
+}
+
+.surface-pale {
+  background: #F0F5FF;
+  border: 1px solid rgba(186, 210, 253, 0.4);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Map popup styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
